@@ -13,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Terrain
+  - Tower
+  - TowerBullets
+  - Enemy
+  - EnemyBullets
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 1236816709
+    locked: 0
+  - name: Tower
+    uniqueID: 3516988379
+    locked: 0
+  - name: TowerBullets
+    uniqueID: 1693800671
+    locked: 0
+  - name: Enemy
+    uniqueID: 1142330459
+    locked: 0
+  - name: EnemyBullets
+    uniqueID: 1108667391
     locked: 0

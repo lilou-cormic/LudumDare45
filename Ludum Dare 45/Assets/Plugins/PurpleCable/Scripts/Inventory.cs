@@ -30,12 +30,27 @@ namespace PurpleCable
 
             _itemDefs = Resources.LoadAll<ItemDef>("Items");
 
+            if (_itemDefs == null || _itemDefs.Length == 0)
+                _itemDefs = Resources.LoadAll<Sprite>("Items").Select(x => GetItemDefFromSprite(x)).ToArray();
+
             _instance = this;
 
             DontDestroyOnLoad(gameObject);
 
             Clear();
         }
+
+        private static ItemDef GetItemDefFromSprite(Sprite sprite)
+        {
+            var itemDef = ScriptableObject.CreateInstance<ItemDef>();
+            itemDef.name = sprite.name;
+            itemDef.DisplayImage = sprite;
+            itemDef.DisplayName = sprite.name;
+
+            return itemDef;
+        }
+
+        public static ItemDef GetRandomItem() => _itemDefs.GetRandom();
 
         public static int GetItemNumber(ItemDef itemDef)
         {

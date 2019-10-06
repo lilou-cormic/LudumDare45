@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ba6925b9fc0c54880ecee84bcf0a05, type: 3}
+  m_Name: GreenTankEnemy
+  m_EditorClassIdentifier: 
+  _DisplayName: 
+  _DisplayImages:
+  - {fileID: -1913773068157399884, guid: 504e36f0c71123a4fba1c8dfa68bf85d, type: 3}
+  - {fileID: 364125463528875345, guid: 504e36f0c71123a4fba1c8dfa68bf85d, type: 3}
+  _EnemyPrefab: {fileID: 8947897428718857452, guid: 03f55822022737641a80828584bac5f3,
+    type: 3}
+  _Points: 2
+  _Speed: 200
+  _DieSound: {fileID: 0}
