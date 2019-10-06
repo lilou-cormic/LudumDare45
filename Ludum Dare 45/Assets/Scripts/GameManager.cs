@@ -1,4 +1,5 @@
 ﻿using PurpleCable;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -47,14 +48,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private bool _isWinning = false;
+
     private void Update()
     {
+        if (_isWinning)
+            return;
+
         //FIXME
         if (_enemySpawners.All(x => x.IsDone))
         {
             if (FindObjectsOfType<Enemy>().Length == 0)
-                SceneManager.LoadScene("Win");
+                StartCoroutine(DoWin());
         }
+    }
+
+    private IEnumerator DoWin()
+    {
+        _isWinning = true;
+
+        yield return new WaitForSeconds(0.5f);
+
+        SceneManager.LoadScene("Win");
     }
 
     private void OnDestroy()

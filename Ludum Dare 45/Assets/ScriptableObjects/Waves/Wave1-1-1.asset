@@ -16,12 +16,12 @@ MonoBehaviour:
   - _EnemyDef: {fileID: 11400000, guid: 36c3aa731232e714d85a46abb4ebcfb8, type: 2}
     _EnemyCount: 10
     _Delay: 0.15
-    _Spacing: 0.5
+    _Spacing: 0.4
   - _EnemyDef: {fileID: 11400000, guid: a4d0b451880d2c441a10858c226879c8, type: 2}
     _EnemyCount: 2
     _Delay: 7
-    _Spacing: 0
+    _Spacing: 0.7
   - _EnemyDef: {fileID: 11400000, guid: 36c3aa731232e714d85a46abb4ebcfb8, type: 2}
     _EnemyCount: 10
     _Delay: 0.5
-    _Spacing: 0.5
+    _Spacing: 0.4

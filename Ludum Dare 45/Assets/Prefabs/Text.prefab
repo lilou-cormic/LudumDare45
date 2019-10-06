@@ -63,12 +63,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 489916ede9d7b894894ccf8813a2f469, type: 2}
-  m_sharedMaterial: {fileID: 3604656576054470808, guid: 489916ede9d7b894894ccf8813a2f469,
+  m_fontAsset: {fileID: 11400000, guid: 6718080da5e560945813d99548951a69, type: 2}
+  m_sharedMaterial: {fileID: -3698975601429769742, guid: 6718080da5e560945813d99548951a69,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -94,8 +92,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

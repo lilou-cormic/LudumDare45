@@ -63,20 +63,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 489916ede9d7b894894ccf8813a2f469, type: 2}
-  m_sharedMaterial: {fileID: 3604656576054470808, guid: 489916ede9d7b894894ccf8813a2f469,
+  m_fontAsset: {fileID: 11400000, guid: 6718080da5e560945813d99548951a69, type: 2}
+  m_sharedMaterial: {fileID: -3698975601429769742, guid: 6718080da5e560945813d99548951a69,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292978462
-  m_fontColor: {r: 0.11764707, g: 0.654902, b: 0.882353, a: 1}
+    rgba: 4283140884
+  m_fontColor: {r: 0.080010675, g: 0.5471698, b: 0.29483563, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -94,12 +92,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 111.75
+  m_fontSize: 42.1
   m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 120
+  m_fontSizeMax: 80
   m_fontStyle: 1
   m_textAlignment: 514
   m_characterSpacing: 0
