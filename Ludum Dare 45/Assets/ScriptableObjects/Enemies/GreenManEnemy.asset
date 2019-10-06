@@ -15,8 +15,7 @@ MonoBehaviour:
   _DisplayName: 
   _DisplayImages:
   - {fileID: 1785240737630438142, guid: 504e36f0c71123a4fba1c8dfa68bf85d, type: 3}
-  _EnemyPrefab: {fileID: 5457401846877642298, guid: 4ed3cca2efed37647a98072404726301,
-    type: 3}
-  _Points: 1
-  _Speed: 100
+  _Prefab: {fileID: 5457401846877642298, guid: 4ed3cca2efed37647a98072404726301, type: 3}
+  _Points: 2
+  _Speed: 1.7
   _DieSound: {fileID: 0}

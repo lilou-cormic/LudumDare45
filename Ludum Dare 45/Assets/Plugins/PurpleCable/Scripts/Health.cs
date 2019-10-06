@@ -34,13 +34,9 @@ namespace PurpleCable
 
         public void ChangeHP(int amount)
         {
-            Debug.Log($"ChangeHP({ amount})");
-
             CurrentHP = Mathf.Clamp(CurrentHP + amount, 0, MaxHP);
 
             HPChanged?.Invoke(this);
-
-            Debug.Log($"CurrentHP == { CurrentHP}");
 
             if (CurrentHP == 0)
                 HPDepleted?.Invoke(this);

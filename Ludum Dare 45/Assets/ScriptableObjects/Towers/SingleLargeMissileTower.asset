@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe5fdb4e27294b4ba34ec4e984558ff, type: 3}
+  m_Name: SingleLargeMissileTower
+  m_EditorClassIdentifier: 
+  _DisplayName: 
+  _DisplayImages:
+  - {fileID: 665091584885044290, guid: 504e36f0c71123a4fba1c8dfa68bf85d, type: 3}
+  - {fileID: 8836055598254960747, guid: 504e36f0c71123a4fba1c8dfa68bf85d, type: 3}
+  - {fileID: 3292438206842899736, guid: 504e36f0c71123a4fba1c8dfa68bf85d, type: 3}
+  _Prefab: {fileID: 268816382589798660, guid: 68def23519303e743b689b4680a2b513, type: 3}
+  _Range: 4
+  _ProjectileDef: {fileID: 11400000, guid: 2abefac273df8b344ade076edbf58eee, type: 2}
+  _ProjectileCount: 1
+  _FireRate: 0.2
+  _CoolDown: 1

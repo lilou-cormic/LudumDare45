@@ -1,14 +1,18 @@
-﻿using System;
+﻿using PurpleCable;
+using System;
 using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Health))]
 public class Enemy : MonoBehaviour
 {
     public static event Action<EnemyDef> EnemyKilled;
     public static event Action<EnemyDef> EnemyReachedBase;
 
     private Rigidbody2D rb;
+
+    public Health Health { get; private set; }
 
     [SerializeField] SpriteRenderer[] SpriteRenderers = null;
 
@@ -30,6 +34,8 @@ public class Enemy : MonoBehaviour
 
     private Vector3 _targetPosition;
 
+    private bool _isDead = false;
+
     public void Init(EnemyDef enemyDef, EnemyWaypoint startWaypoint)
     {
         EnemyDef = enemyDef;
@@ -41,6 +47,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        Health = GetComponent<Health>();
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,6 +59,9 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (_isDead)
+            return;
+
         if (Vector3.Distance(transform.position, _targetPosition) < 0.1)
         {
             transform.position = _targetPosition;
@@ -62,21 +76,51 @@ public class Enemy : MonoBehaviour
             NextWaypoint = NextWaypoint.GetNextWaypoint();
         }
 
-        var direction = (_targetPosition - transform.position).normalized;
+        rb.SetVelocityAndRotation(_targetPosition, EnemyDef.Speed);
+    }
 
-        rb.velocity = direction * EnemyDef.Speed * Time.deltaTime;
-        rb.rotation = -Quaternion.LookRotation(direction).eulerAngles.x;
+    public void GetHit(int damage)
+    {
+        if (_isDead)
+            return;
+
+        Health.ChangeHP(-damage);
+
+        if (Health.CurrentHP <= 0)
+            Die();
+    }
+
+    private IEnumerator DoGetHit()
+    {
+        foreach (var spriteRenderer in SpriteRenderers)
+        {
+            spriteRenderer.color = Color.red;
+        }
+
+        yield return new WaitForSecondsRealtime(0.2f);
+
+        foreach (var spriteRenderer in SpriteRenderers)
+        {
+            spriteRenderer.color = Color.white;
+        }
     }
 
     public void Die()
     {
+        if (_isDead)
+            return;
+
         EnemyKilled?.Invoke(EnemyDef);
+
+        _isDead = true;
 
         StartCoroutine(DoDie());
     }
 
     private IEnumerator DoDie()
     {
+        rb.velocity = Vector3.zero;
+
         //TODO Enemy.DoDie
         //Die animation
         //Explosion whatever
@@ -88,6 +132,9 @@ public class Enemy : MonoBehaviour
 
     public void Win()
     {
+        if (_isDead)
+            return;
+
         //TODO Enemy.Win
 
         EnemyReachedBase?.Invoke(EnemyDef);

@@ -1,4 +1,5 @@
 ﻿using PurpleCable;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
+    public static LayerMask EnemyLayerMask => Instance.EnemyLayer;
+
+    [SerializeField] LayerMask EnemyLayer;
 
     public Player Player { get; private set; }
 
@@ -39,6 +44,16 @@ public class GameManager : MonoBehaviour
         foreach (var enemySpawner in _enemySpawners)
         {
             enemySpawner.Spawn();
+        }
+    }
+
+    private void Update()
+    {
+        //FIXME
+        if (_enemySpawners.All(x => x.IsDone))
+        {
+            if (FindObjectsOfType<Enemy>().Length == 0)
+                SceneManager.LoadScene("Win");
         }
     }
 

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6811d65cbf1584691c02a61d80cfcb, type: 3}
+  m_Name: SmallMissile
+  m_EditorClassIdentifier: 
+  _DisplayName: 
+  _DisplayImages:
+  - {fileID: -6107155909932373041, guid: 504e36f0c71123a4fba1c8dfa68bf85d, type: 3}
+  _Prefab: {fileID: 818343203044252417, guid: 3a80da4872df3ce429163097f149dfcc, type: 3}
+  _Damage: 2
+  _Radius: 1
+  _Speed: 10
+  _IsFixedTarget: 1
+  _IsHoming: 0

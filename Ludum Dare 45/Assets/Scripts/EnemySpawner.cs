@@ -10,6 +10,8 @@ public class EnemySpawner : MonoBehaviour
 
     private Queue<EnemyDelay> _enemyQueue = null;
 
+    public bool IsDone { get; private set; }
+
     private void FillEnemyQueue()
     {
         _enemyQueue = new Queue<EnemyDelay>();
@@ -42,10 +44,12 @@ public class EnemySpawner : MonoBehaviour
 
             if (enemyDelay.EnemyDef != null)
             {
-                Enemy enemy = Instantiate(enemyDelay.EnemyDef.EnemyPrefab, transform);
+                Enemy enemy = Instantiate(enemyDelay.EnemyDef.Prefab, transform);
                 enemy.Init(enemyDelay.EnemyDef, EnemyWaypoint);
             }
         }
+
+        IsDone = true;
 
         yield return null;
     }
