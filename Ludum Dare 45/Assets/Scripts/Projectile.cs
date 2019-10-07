@@ -14,6 +14,8 @@ public class Projectile : MonoBehaviour
 
     private Vector3 _targetLocation;
 
+    private bool _hasHit = false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,6 +60,11 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (_hasHit)
+            return;
+
+        _hasHit = true;
+
         Explode(collision.gameObject.GetComponent<Enemy>());
     }
 
@@ -69,6 +76,8 @@ public class Projectile : MonoBehaviour
         }
         else
         {
+            GameManager.Explosion(transform.position, ProjectileDef.Radius);
+
             var cols = Physics2D.OverlapCircleAll(transform.position, ProjectileDef.Radius, GameManager.EnemyLayerMask);
 
             foreach (var col in cols)
@@ -77,8 +86,6 @@ public class Projectile : MonoBehaviour
             }
         }
 
-
-        //TODO Projectile.Explode
         Destroy(gameObject);
     }
 }

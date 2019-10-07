@@ -14,13 +14,15 @@ public class EnemySpawner : MonoBehaviour
 
     private void FillEnemyQueue()
     {
+        int countAdd = GameManager.Instance.Level / 2;
+
         _enemyQueue = new Queue<EnemyDelay>();
 
         foreach (var group in EnemyWaveDef.Sequence)
         {
             _enemyQueue.Enqueue(new EnemyDelay(null, group.Delay));
 
-            for (int i = 0; i < group.EnemyCount; i++)
+            for (int i = 0; i < group.EnemyCount + countAdd; i++)
             {
                 _enemyQueue.Enqueue(new EnemyDelay(group.EnemyDef, group.Spacing));
             }

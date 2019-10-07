@@ -17,4 +17,7 @@ public class TowerDef : DefBase<TowerDef, Tower>
 
     [SerializeField] float _CoolDown = 0f;
     public float CoolDown => _CoolDown;
+
+    [SerializeField] int _BuildCost = 5;
+    public int BuildCost => _BuildCost;
 }

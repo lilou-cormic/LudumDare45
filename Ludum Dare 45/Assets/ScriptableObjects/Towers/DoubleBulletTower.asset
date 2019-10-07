@@ -23,3 +23,4 @@ MonoBehaviour:
   _ProjectileCount: 2
   _FireRate: 0.2
   _CoolDown: 0.2
+  _BuildCost: 10

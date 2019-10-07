@@ -41,14 +41,12 @@ public class Tower : MonoBehaviour
 
         if (_timeLeft <= 0)
         {
-            Armed.SetActive(true);
+            SetIsArmed(true);
 
             Shoot();
 
             _timeLeft = TowerDef.CoolDown;
         }
-
-
 
         if (_Target != null)
             Turret.transform.SetRotation2D(_Target.position);
@@ -100,7 +98,7 @@ public class Tower : MonoBehaviour
             Destroy(projectile.gameObject, 10f);
         }
 
-        Armed.SetActive(false);
+        SetIsArmed(false);
     }
 
     private void OnDrawGizmos()
@@ -110,5 +108,10 @@ public class Tower : MonoBehaviour
 
         if (TowerDef != null)
             Gizmos.DrawWireSphere(transform.position, TowerDef.Range);
+    }
+
+    private void SetIsArmed(bool isArmed)
+    {
+        Armed.SetActive(isArmed);
     }
 }

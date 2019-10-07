@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c9d69a70a0377a4a9e5279e5f59a318, type: 3}
-  m_Name: TestWave
+  m_Name: Wave1-2-1
   m_EditorClassIdentifier: 
   _Sequence:
   - _EnemyDef: {fileID: 11400000, guid: a27946308ba3d7c429a49767f4c7641c, type: 2}
     _EnemyCount: 2
     _Delay: 8
-    _Spacing: 0.7
+    _Spacing: 0.9
+  - _EnemyDef: {fileID: 11400000, guid: f765237a66bfc0546ac0efacdc39831d, type: 2}
+    _EnemyCount: 2
+    _Delay: 8
+    _Spacing: 0.9

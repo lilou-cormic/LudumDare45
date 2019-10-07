@@ -20,8 +20,16 @@ MonoBehaviour:
   - _EnemyDef: {fileID: 11400000, guid: a4d0b451880d2c441a10858c226879c8, type: 2}
     _EnemyCount: 2
     _Delay: 7
-    _Spacing: 0.7
+    _Spacing: 0.6
   - _EnemyDef: {fileID: 11400000, guid: 36c3aa731232e714d85a46abb4ebcfb8, type: 2}
     _EnemyCount: 10
     _Delay: 0.5
     _Spacing: 0.4
+  - _EnemyDef: {fileID: 11400000, guid: 5615def031ba2b649b2fff47ff0a9796, type: 2}
+    _EnemyCount: 5
+    _Delay: 3
+    _Spacing: 0.3
+  - _EnemyDef: {fileID: 11400000, guid: 6f58dfa26af64cd4db63295fc13ffe26, type: 2}
+    _EnemyCount: 2
+    _Delay: 3
+    _Spacing: 0.6

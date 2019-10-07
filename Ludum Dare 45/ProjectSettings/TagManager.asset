@@ -18,7 +18,7 @@ TagManager:
   - TowerBullets
   - Enemy
   - EnemyBullets
-  - 
+  - Explosions
   - 
   - 
   - 
@@ -38,11 +38,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Terrain
     uniqueID: 1236816709
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Tower
     uniqueID: 3516988379
@@ -55,4 +55,7 @@ TagManager:
     locked: 0
   - name: EnemyBullets
     uniqueID: 1108667391
+    locked: 0
+  - name: Explosions
+    uniqueID: 4018428469
     locked: 0

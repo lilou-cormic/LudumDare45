@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] SpriteRenderer[] SpriteRenderers = null;
 
+    [SerializeField] AudioClip HitSound = null;
+
     public EnemyDef EnemyDef { get; private set; }
 
     private EnemyWaypoint _NextWaypoint;
@@ -41,6 +43,8 @@ public class Enemy : MonoBehaviour
         EnemyDef = enemyDef;
         NextWaypoint = startWaypoint;
 
+        Health.MaxHP = EnemyDef.MaxHP;
+
         for (int i = 0; i < enemyDef.DisplayImages.Length; i++)
         {
             SpriteRenderers[i].sprite = enemyDef.DisplayImages[i];
@@ -49,12 +53,9 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        Health = GetComponent<Health>();
-    }
-
-    private void Start()
-    {
         rb = GetComponent<Rigidbody2D>();
+
+        Health = GetComponent<Health>();
     }
 
     private void Update()
@@ -84,24 +85,33 @@ public class Enemy : MonoBehaviour
         if (_isDead)
             return;
 
+        StartCoroutine(DoGetHit(damage));
+    }
+
+    private IEnumerator DoGetHit(int damage)
+    {
+        HitSound.Play();
+
+        foreach (var spriteRenderer in SpriteRenderers)
+        {
+            spriteRenderer.color = new Color(1f, 0f, 0f, 0.5f);
+        }
+
         Health.ChangeHP(-damage);
 
         if (Health.CurrentHP <= 0)
+        {
             Die();
-    }
-
-    private IEnumerator DoGetHit()
-    {
-        foreach (var spriteRenderer in SpriteRenderers)
-        {
-            spriteRenderer.color = Color.red;
+            yield return null;
         }
-
-        yield return new WaitForSecondsRealtime(0.2f);
-
-        foreach (var spriteRenderer in SpriteRenderers)
+        else
         {
-            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.2f);
+
+            foreach (var spriteRenderer in SpriteRenderers)
+            {
+                spriteRenderer.color = Color.white;
+            }
         }
     }
 
@@ -125,6 +135,8 @@ public class Enemy : MonoBehaviour
         //Die animation
         //Explosion whatever
         EnemyDef.DieSound.Play();
+
+        yield return new WaitForSeconds(0.2f);
 
         Destroy(gameObject);
         yield return null;

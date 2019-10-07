@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpriteRenderers:
   - {fileID: 7379201444242341967}
+  HitSound: {fileID: 8300000, guid: 13c3c9c6632fa0c4e97ac4d194a8154d, type: 3}
 --- !u!50 &4506139994421590019
 Rigidbody2D:
   serializedVersion: 4

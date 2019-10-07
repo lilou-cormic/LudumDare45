@@ -7,7 +7,7 @@ namespace PurpleCable
     {
         [SerializeField]
         private int _MaxHP;
-        public int MaxHP { get => _MaxHP; set => _MaxHP = value; }
+        public int MaxHP { get => _MaxHP; set { _MaxHP = value; SetCurrentHP(); } }
 
         public int CurrentHP { get; private set; }
 
@@ -23,8 +23,7 @@ namespace PurpleCable
 
         private void OnEnable()
         {
-            CurrentHP = MaxHP;
-            HealthAdded?.Invoke(this);
+            SetCurrentHP();
         }
 
         private void OnDisable()
@@ -40,6 +39,12 @@ namespace PurpleCable
 
             if (CurrentHP == 0)
                 HPDepleted?.Invoke(this);
+        }
+
+        private void SetCurrentHP()
+        {
+            CurrentHP = MaxHP;
+            HealthAdded?.Invoke(this);
         }
     }
 }

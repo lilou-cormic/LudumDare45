@@ -281,7 +281,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3604656576054470808, guid: 489916ede9d7b894894ccf8813a2f469,
+      objectReference: {fileID: -3698975601429769742, guid: 6718080da5e560945813d99548951a69,
         type: 2}
     - target: {fileID: 4184024935688225819, guid: ffb838e4bc2c69544b81a15603ad1398,
         type: 3}
@@ -301,7 +301,12 @@ PrefabInstance:
     - target: {fileID: 4184024935688225819, guid: ffb838e4bc2c69544b81a15603ad1398,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194648851583326724, guid: ffb838e4bc2c69544b81a15603ad1398,
+        type: 3}
+      propertyPath: Label
+      value: Retry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffb838e4bc2c69544b81a15603ad1398, type: 3}
@@ -368,7 +373,7 @@ MonoBehaviour:
     m_Left: 10
     m_Right: 10
     m_Top: 10
-    m_Bottom: 10
+    m_Bottom: 60
   m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -833,8 +838,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3604656576054470808, guid: 489916ede9d7b894894ccf8813a2f469,
+      objectReference: {fileID: -3698975601429769742, guid: 6718080da5e560945813d99548951a69,
         type: 2}
+    - target: {fileID: 1194648851583326724, guid: ffb838e4bc2c69544b81a15603ad1398,
+        type: 3}
+      propertyPath: Label
+      value: Menu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffb838e4bc2c69544b81a15603ad1398, type: 3}
 --- !u!1 &1311059482
@@ -1295,9 +1305,9 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 16
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -1395,7 +1405,7 @@ PrefabInstance:
     - target: {fileID: 2048037261337923965, guid: 6e216d8a362c8cb4fb4d3a4e25d5b024,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2048037261337923965, guid: 6e216d8a362c8cb4fb4d3a4e25d5b024,
         type: 3}
@@ -1555,12 +1565,12 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
-  m_Spacing: 0
+  m_ChildAlignment: 4
+  m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
 --- !u!222 &1796695939
@@ -1687,7 +1697,7 @@ PrefabInstance:
     - target: {fileID: 2048037261337923965, guid: 6e216d8a362c8cb4fb4d3a4e25d5b024,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 46.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2048037261337923965, guid: 6e216d8a362c8cb4fb4d3a4e25d5b024,
         type: 3}

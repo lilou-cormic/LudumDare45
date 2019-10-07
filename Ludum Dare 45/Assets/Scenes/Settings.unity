@@ -679,6 +679,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 182402201959978548, guid: 124f85dc758824643aadcdd289d21a01,
+        type: 3}
+      propertyPath: TestSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 13c3c9c6632fa0c4e97ac4d194a8154d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124f85dc758824643aadcdd289d21a01, type: 3}
 --- !u!224 &1036710434 stripped

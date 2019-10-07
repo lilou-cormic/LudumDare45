@@ -17,5 +17,6 @@ MonoBehaviour:
   - {fileID: 5281382862928127884, guid: 504e36f0c71123a4fba1c8dfa68bf85d, type: 3}
   _Prefab: {fileID: 5457401846877642298, guid: 4ed3cca2efed37647a98072404726301, type: 3}
   _Points: 1
-  _Speed: 1.8
+  _Speed: 2
+  _MaxHP: 3
   _DieSound: {fileID: 0}
