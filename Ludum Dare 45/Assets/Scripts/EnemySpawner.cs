@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void FillEnemyQueue()
     {
-        int countAdd = GameManager.Instance.Level / 2;
+        int countAdd = GameManager.Level / 2;
 
         _enemyQueue = new Queue<EnemyDelay>();
 

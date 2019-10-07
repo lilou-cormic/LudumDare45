@@ -1210,7 +1210,7 @@ PrefabInstance:
     - target: {fileID: 2901855970248396497, guid: 8730914f11f3ee04b96f96df930974c6,
         type: 3}
       propertyPath: m_text
-      value: LD45
+      value: Tagatorni
       objectReference: {fileID: 0}
     - target: {fileID: 2901855970248396497, guid: 8730914f11f3ee04b96f96df930974c6,
         type: 3}
@@ -1225,7 +1225,7 @@ PrefabInstance:
     - target: {fileID: 2901855970248396497, guid: 8730914f11f3ee04b96f96df930974c6,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2901855970248396497, guid: 8730914f11f3ee04b96f96df930974c6,
         type: 3}

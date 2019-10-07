@@ -37,8 +37,8 @@ public class GameManager : MonoBehaviour
 
     private bool _isWinning = false;
 
-    private int _Level = 1;
-    public int Level { get => _Level; set { _Level = value; SetLevelText(); } }
+    private static int _Level = 1;
+    public static int Level { get => _Level; set { _Level = value; SetLevelText(); } }
 
     private void Awake()
     {
@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
 
     private void SetCashText() => CashText.text = "$" + Player.Cash;
 
-    private void SetLevelText() => WaveText.text = "Wave: " + Level.ToString("00");
+    private static void SetLevelText() => Instance.WaveText.text = "Wave: " + Level.ToString("00");
 
     private void Health_HPDepleted(Health obj)
     {
